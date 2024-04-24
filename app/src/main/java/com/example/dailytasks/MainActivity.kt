@@ -74,8 +74,6 @@ class MainActivity : AppCompatActivity() {
                     dialog.dismiss()
                 }
                 .show()
-
-            // Retorna true para indicar que o evento de clique longo foi tratado
             true
         }
     }
@@ -98,7 +96,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun adicionarTarefa() {
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this, R.style.AlertDialogCustom)
         builder.setTitle("Nova Tarefa")
 
         val input = EditText(this)

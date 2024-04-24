@@ -4,5 +4,8 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- outras configurações do tema -->
     </style>
-
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@drawable/borda_arredondada</item>
+        <item name="android:textColor">@color/cor_texto_dialogo</item>
+    </style>
 </resources>
