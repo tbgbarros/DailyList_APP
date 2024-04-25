@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.dailytasks"
+    namespace = "com.example.dailylist"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.dailytasks"
-        minSdk = 24
+        applicationId = "com.example.dailylist"
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -42,9 +42,9 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
+    implementation ("com.google.code.gson:gson:2.8.8")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
-    implementation ("com.google.code.gson:gson:2.8.8")
 }

@@ -1,4 +1,4 @@
-package com.example.dailytasks
+package com.example.dailylist
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.*
 import com.google.gson.Gson
 import android.app.AlertDialog
-import android.content.DialogInterface
+import android.graphics.PorterDuff
 import android.text.InputType
 import android.widget.EditText
 
@@ -17,8 +17,10 @@ import android.widget.ListView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.dailylist.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,6 +41,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val imageView = findViewById<ImageView>(R.id.imageIcone)
+        imageView.setColorFilter(ContextCompat.getColor(this, android.R.color.white), PorterDuff.Mode.SRC_IN)
 
         banco = getSharedPreferences("MinhaLista", Context.MODE_PRIVATE)
         tarefas = carregarTarefas()
@@ -74,6 +78,8 @@ class MainActivity : AppCompatActivity() {
                     dialog.dismiss()
                 }
                 .show()
+
+            // Retorna true para indicar que o evento de clique longo foi tratado
             true
         }
     }
@@ -96,7 +102,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun adicionarTarefa() {
-        val builder = AlertDialog.Builder(this, R.style.AlertDialogCustom)
+        val builder = AlertDialog.Builder(this)
         builder.setTitle("Nova Tarefa")
 
         val input = EditText(this)

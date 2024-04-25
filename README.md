@@ -1,1 +1,0 @@
-"# DailyList_APP" 

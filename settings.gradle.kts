@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Daily Tasks"
+rootProject.name = "DailyList"
 include(":app")
  

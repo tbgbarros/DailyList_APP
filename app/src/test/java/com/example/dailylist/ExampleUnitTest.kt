@@ -1,4 +1,4 @@
-package com.example.dailytasks
+package com.example.dailylist
 
 import org.junit.Test
 
