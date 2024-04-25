@@ -1,4 +1,4 @@
-# DailyList
+# Daily List
 
 ![home](https://github.com/tbgbarros/DailyList_APP/assets/111811766/654578bd-b501-4a38-b4e5-a1e28150a1a8)
 
