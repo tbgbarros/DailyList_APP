@@ -64,22 +64,15 @@ class MainActivity : AppCompatActivity() {
             AlertDialog.Builder(this)
                 .setMessage("Deseja excluir esta tarefa?")
                 .setPositiveButton("Sim") { dialog, which ->
-                    // Remover a tarefa da lista
                     tarefas.removeAt(position)
-                    // Salvar as tarefas atualizadas
                     salvarTarefas()
-                    // Notificar o adaptador de que os dados mudaram
                     adaptador.notifyDataSetChanged()
-                    // Atualizar a exibição da lista
                     atualizarLista()
                 }
                 .setNegativeButton("Não") { dialog, which ->
-                    // Cancelar a exclusão
                     dialog.dismiss()
                 }
                 .show()
-
-            // Retorna true para indicar que o evento de clique longo foi tratado
             true
         }
     }
