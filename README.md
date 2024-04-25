@@ -4,7 +4,7 @@
 
 
 ## Descrição
-DailyTasks é um aplicativo simples para adicionar, visualizar e excluir tarefas diárias.
+Daily List é um aplicativo simples para adicionar, visualizar e excluir tarefas diárias.
 
 ## Funcionalidades
 - Adicionar tarefas à lista.
